@@ -1,0 +1,10 @@
+#!/bin/sh
+
+    
+case "$(echo "Shutdown\nRestart\nLogout\nSuspend\nLock" | dmenu  -p "Power:" -l 5)" in
+        Shutdown) exec loginctl poweroff;;
+        Restart) exec loginctl reboot;;
+        Logout) kill -HUP $XDG_SESSION_PID;;
+        Suspend) exec loginctl suspend;;
+        Lock) exec i3lock-fancy;;
+esac
