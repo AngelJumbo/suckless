@@ -1,52 +1,20 @@
-# Prerequisites
-*.d
+# dwm
+./dwm/*.o
+./dwm/dwm
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# dmenu
+./dmenu/*.o
+./dmenu/dmenu
+./dmenu/stest
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# dwmblocks
+./dwmblocks/dwmblocks
 
-# Precompiled Headers
-*.gch
-*.pch
+# slstatus
+./slstatus/*.o
+./slstatus/slstatus
+./slstatus/components/*.o
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# st
+./st/*.o
+./st/st
