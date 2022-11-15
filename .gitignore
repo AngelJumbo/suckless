@@ -1,20 +1,20 @@
 # dwm
-./dwm/*.o
-./dwm/dwm
+dwm/*.o
+dwm/dwm
 
 # dmenu
-./dmenu/*.o
-./dmenu/dmenu
-./dmenu/stest
+dmenu/*.o
+dmenu/dmenu
+dmenu/stest
 
 # dwmblocks
-./dwmblocks/dwmblocks
+dwmblocks/dwmblocks
 
 # slstatus
-./slstatus/*.o
-./slstatus/slstatus
-./slstatus/components/*.o
+slstatus/*.o
+slstatus/slstatus
+slstatus/components/*.o
 
 # st
-./st/*.o
-./st/st
+st/*.o
+st/st
