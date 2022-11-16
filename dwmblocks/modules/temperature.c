@@ -29,7 +29,7 @@
 			return NULL;
 		}
 
-		return bprintf("%ju", temp / 1000);
+		return bprintf("%ju°C", temp / 1000);
 	}
 #elif defined(__OpenBSD__)
 	#include <stdio.h>
@@ -58,7 +58,7 @@
 		}
 
 		/* kelvin to celsius */
-		return bprintf("%d", (int)((float)(temp.value-273150000) / 1E6));
+		return bprintf("%d°C", (int)((float)(temp.value-273150000) / 1E6));
 	}
 #elif defined(__FreeBSD__)
 	#include <stdio.h>
@@ -79,7 +79,7 @@
 			return NULL;
 
 		/* kelvin to decimal celcius */
-		return bprintf("%d.%d", (temp - 2731) / 10, abs((temp - 2731) % 10));
+		return bprintf("%d.%d°C", (temp - 2731) / 10, abs((temp - 2731) % 10));
 	}
 #endif
 

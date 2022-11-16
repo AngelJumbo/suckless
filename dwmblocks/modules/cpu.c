@@ -68,10 +68,10 @@ const char *cpu_perc(void) {
     return NULL;
   }
 
-  return bprintf("%d", (int)(100 *
-                             ((b[0] + b[1] + b[2] + b[5] + b[6]) -
-                              (a[0] + a[1] + a[2] + a[5] + a[6])) /
-                             sum));
+  return bprintf("%d%%", (int)(100 *
+                               ((b[0] + b[1] + b[2] + b[5] + b[6]) -
+                                (a[0] + a[1] + a[2] + a[5] + a[6])) /
+                               sum));
 }
 #elif defined(__OpenBSD__)
 #include <sys/param.h>
@@ -123,7 +123,7 @@ const char *cpu_perc(void) {
     return NULL;
   }
 
-  return bprintf("%d",
+  return bprintf("%d%%",
                  100 *
                      ((a[CP_USER] + a[CP_NICE] + a[CP_SYS] + a[CP_INTR]) -
                       (b[CP_USER] + b[CP_NICE] + b[CP_SYS] + b[CP_INTR])) /
@@ -170,7 +170,7 @@ const char *cpu_perc(void) {
     return NULL;
   }
 
-  return bprintf("%d",
+  return bprintf("%d%%",
                  100 *
                      ((a[CP_USER] + a[CP_NICE] + a[CP_SYS] + a[CP_INTR]) -
                       (b[CP_USER] + b[CP_NICE] + b[CP_SYS] + b[CP_INTR])) /
