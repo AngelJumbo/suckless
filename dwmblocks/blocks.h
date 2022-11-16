@@ -3,11 +3,11 @@
 // the ^c#*^ are fg colors form https://dwm.suckless.org/patches/status2d/ 
 static const Block blocks[] = {
     /*Icon*/ /*Command*/ /*Update Interval*/ /*Update Signal*/
+    {"^d^ ^b#d65d0e^^c#1d2021^  ^b#fe8019^ ", "xbps-install -un | wc -l",					3600,	 0},
     {"^d^ ^b#d79921^^c#1d2021^  ^b#fabd2f^ ", "block-battery perc BAT0",  					60,	 0},
-    {"^d^ ^b#458588^^c#1d2021^  ^b#83a598^ ", "block-temperature /sys/class/thermal/thermal_zone0/temp",	5,	 0},
     {"^d^ ^b#98971a^^c#1d2021^  ^b#b8bb26^ ", "block-cpu perc",    						2,	 0},
     {"^d^ ^b#689d6a^^c#1d2021^  ^b#8ec07c^ ", "block-ram used",    						10,	 0},
-    {"^d^ ^b#d65d0e^^c#1d2021^  ^b#fe8019^ ", "xbps-install -un | wc -l",					3600,	 0},
+    {"^d^ ^b#458588^^c#1d2021^  ^b#83a598^ ", "block-temperature /sys/class/thermal/thermal_zone0/temp",	5,	 0},
     {"^d^ ^b#b16286^^c#1d2021^  ^b#d3869b^ ", "block-datetime \"%H:%M \"",					60,	 0},
 
 };
