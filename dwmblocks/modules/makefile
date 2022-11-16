@@ -1,4 +1,4 @@
-all: bindir block-cpu block-datetime block-ram block-temperature block-uptime
+all: bindir block-cpu block-datetime block-ram block-temperature block-uptime block-bat
 
 bindir:
 	mkdir -p ./bin
@@ -18,6 +18,9 @@ block-temperature: temperature.c util.o
 
 block-uptime: uptime.c util.o
 	$(CC) uptime.c util.o -o bin/block-uptime
+
+block-bat: battery.c util.o
+	$(CC) battery.c util.o -o bin/block-battery
 
 util.o: util.c
 	$(CC) -c util.c -o util.o
