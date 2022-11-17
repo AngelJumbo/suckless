@@ -86,14 +86,22 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,"-l","20","-p","run: ", NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *changekeyscmd[] = {"chkeys", NULL}; //script to change the keyboard layout
+static const char *screenshotcmd[] = {"flameshot","gui", NULL};
+static const char *screenshotfullcmd[] = {"flameshot","screen", NULL};
 static const char *dmenupowercmd[]  = { "dmenu-power", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *openminimalbrowsercmd[] = {"brave-browser-stable","--new-window","--app=https://www.google.com", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ 0,                       	XK_Print,  spawn,          {.v = screenshotcmd } },
+	{ ShiftMask,                   	XK_Print,  spawn,          {.v = screenshotfullcmd } },
+	{ MODKEY|AltMask,               XK_space,  spawn,          {.v = changekeyscmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,             		XK_Return, spawn,          {.v = termcmd } },
+	{MODKEY, 			XK_e, spawn,		   {.v = openminimalbrowsercmd}},
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_x,	   spawn,     	   {.v = dmenupowercmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
