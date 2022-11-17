@@ -8,7 +8,8 @@ static const Block blocks[] = {
     {"^d^ ^b#d65d0e^^c#1d2021^  ^b#fe8019^ ", "xbps-install -un | wc -l",					3600,	 10},
     {"^d^ ^b#458588^^c#1d2021^  ^b#83a598^ ", "block-temperature /sys/class/thermal/thermal_zone0/temp",	5,	 0},
     {"^d^ ^b#689d6a^^c#1d2021^  ^b#8ec07c^ ", "block-ram used",    						10,	 0},
-    {"^d^ ^b#b16286^^c#1d2021^  ^b#d3869b^ ", "block-datetime \"%H:%M \"",					60,	 0},
+    {"^d^ ^b#b16286^^c#1d2021^  ^b#d3869b^ ", "block-keymap ",							0,	 12},
+    {"^d^ ^b#a89984^^c#1d2021^  ^b#ebdbb2^ ", "block-datetime \"%H:%M \"",					60,	 0},
 
 };
 
