@@ -13,8 +13,6 @@ Then you need to add the binaries to your path e.g.
 export PATH=$PATH:$HOME/suckless/dwmblocks/modules/bin
 ```
 
-You could use (C "scripts")[https://github.com/ryanmjacobs/c] if you don't want to compile.
-
 ## Colors
 
 My dwm is patched with [status2d](https://dwm.suckless.org/patches/status2d/):
