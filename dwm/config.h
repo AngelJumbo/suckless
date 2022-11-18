@@ -30,7 +30,8 @@ static const char *colors[][3]      = {
 
 /* tagging */
 //static const char *tags[] = { "一", "二", "三", "四", "五", "六", "七", "八", "九" };
-static const char *tags[] = { "α", "β", "ɣ", "δ", "ε", "ζ", "η", "θ", "ι" };
+//static const char *tags[] = { "α", "β", "ɣ", "δ", "ε", "ζ", "η", "θ", "ι" };
+static const char *tags[] = { "𝜶", "𝜷", "𝜸", "𝜹", "𝜺", "𝜻", "𝜼", "𝜽", "𝜾" };
 
 static const Rule rules[] = {
 	/* xprop(1):
