@@ -6,6 +6,11 @@ I only ported the ones that I use, I will port the rest of the slstatus someday.
 
 If anyone wants to create a separate repository for this files it's welcome to do so.
 
+## CPU block
+
+If you use it in dwmblock it will work but If you try to run it by itself it probably won't work.
+This program needs to run in intervals, if you run it just one time it will not work. 
+
 ## Requirements
 
 Xlib is required to bluid the keymap module, but if you are not gonna use that module you can remove it from the all rule in the makefile
