@@ -46,7 +46,7 @@ const char *ram_perc(void) {
     return NULL;
   }
 
-  return bprintf("%d", 100 * ((total - free) - (buffers + cached)) / total);
+  return bprintf("%d%%", 100 * ((total - free) - (buffers + cached)) / total);
 }
 
 const char *ram_total(void) {
@@ -114,7 +114,7 @@ const char *ram_perc(void) {
 
   if (load_uvmexp(&uvmexp)) {
     percent = uvmexp.active * 100 / uvmexp.npages;
-    return bprintf("%d", percent);
+    return bprintf("%d%%", percent);
   }
 
   return NULL;
@@ -184,7 +184,7 @@ const char *ram_perc(void) {
       !len)
     return NULL;
 
-  return bprintf("%d", active * 100 / npages);
+  return bprintf("%d%%", active * 100 / npages);
 }
 
 const char *ram_used(void) {
